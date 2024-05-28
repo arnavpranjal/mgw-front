@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_ENV=development next dev -p 3000",
-    "build": "cross-env NODE_ENV=production next build",
-    "start": "cross-env NODE_ENV=production next start",
-    "lint": "cross-env NODE_ENV=development next lint"
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "@dhx/trial-gantt": "^8.0.3",
