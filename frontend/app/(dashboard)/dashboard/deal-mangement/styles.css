@@ -1,0 +1,24 @@
+/* html,
+body,
+#root {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+} */
+
+.gantt-container {
+  height: calc(100vh - 50px - 200px);
+  width: calc(100vw - 50px - 170px);
+}
+
+.scrollable-div-gantt {
+  overflow-x: auto !important;
+  width: calc(100vw - 50px - 170px);
+
+}
+
+@media (min-width: 768px) {
+    .md\:p-8 {
+        padding: 10px;
+    }
+}

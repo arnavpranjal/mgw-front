@@ -1,0 +1,23 @@
+/* Designing for scroll-bar */
+::-webkit-scrollbar {
+  position: absolute;
+  max-height: 15px!important;
+  width: 5px!important;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: gainsboro;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

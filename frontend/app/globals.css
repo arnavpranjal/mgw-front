@@ -1,0 +1,199 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    /* --primary: 199 94% 60%; */
+    --primary: 181 71% 44%;
+    --primary-foreground: 0 0% 98%;
+    /* #0EA5E9 */
+
+    --secondary: 180 71%, 44%;
+    --secondary-foreground: 240 5.9% 10%;
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 180 71% 40%;
+    --primary-foreground: 240 5.9% 10%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground box-border;
+  }
+}
+
+@layer utilities {
+  .min-h-screen {
+    min-height: 100vh; /* Fallback */
+    min-height: 100dvh;
+  }
+  .h-screen {
+    height: 100vh; /* Fallback */
+    height: 100dvh;
+  }
+}
+
+/* new css */
+
+.container-frost {
+  /* width: 30rem;
+  height: 20rem; */
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  /* border-radius: 5px; */
+  /* position: relative; */
+  z-index: 1;
+  background: inherit;
+  overflow: hidden;
+}
+
+.container-frost:before {
+  content: "";
+  position: absolute;
+  background: inherit;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
+  filter: blur(10px);
+  margin: -20px;
+}
+
+.ql-toolbar:first-child:not(:last-child) {
+  display: none !important;
+}
+
+.editor-padding {
+  padding: 0px !important;
+}
+.ql-toolbar {
+  background-color: #e0e0e0;
+  border: 1px solid #e0e0e0;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  padding: 8px;
+}
+
+.ql-toolbar .ql-formats button,
+.ql-toolbar .ql-formats select {
+  color: #000;
+}
+
+.ql-container {
+  border: 1px solid #e0e0e0;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  height: 200px;
+}
+
+.ql-editor {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #000;
+  border-radius: 5%;
+  padding: 12px;
+  background-color: #fff;
+}
+.scroll-area-content > div {
+  display: block !important;
+}
+
+input[type="checkbox"][disabled]:checked {
+  background-color: var(
+    --checked-color
+  ); /* Sets the background color of checked checkbox */
+  border-color: var(
+    --checked-color
+  ); /* Sets the border color of checked checkbox */
+  color: var(--color); /* Sets the color of the checkbox checkmark */
+}
+
+/* .theme-custom {
+  
+  --gradient: linear-gradient(to top left,#16d9e3,#30c7ec,#46aef7);
+
+  --background: 194 53.3% 3.92%;
+  --foreground: 194 8.2% 97.45%;
+
+  --muted: 194 41% 14.7%;
+  --muted-foreground: 194 8.2% 54.9%;
+
+  --popover: 194 48.6% 6.37%;
+  --popover-foreground: 194 8.2% 97.45%;
+
+  --card: 194 48.6% 6.37%;
+  --card-foreground: 194 8.2% 97.45%;
+
+  --border: 194 41% 14.7%;
+  --input: 194 41% 14.7%;
+
+  --primary: 194 82% 49%;
+  --primary-foreground: 194 8.2% 4.9%;
+
+  --secondary: 194 41% 14.7%;
+  --secondary-foreground: 194 8.2% 97.45%;
+
+  --accent: 194 41% 14.7%;
+  --accent-foreground: 194 8.2% 97.45%;
+
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 194 8.2% 97.45%;
+
+  --ring: 194 82% 49%;
+} */
