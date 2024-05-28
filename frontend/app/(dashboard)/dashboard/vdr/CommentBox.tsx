@@ -284,8 +284,7 @@ const CommentBox: React.FC<CommentBoxProps> = ({ fileId, setFileDataList }) => {
             file.id === fileId ? { ...file, comments: file.comments + 1 } : file
           )
         );
-      } catch (error) {
-        console.log(error);
+      } catch {
       } finally {
         setIsLoadingComments(false);
       }
